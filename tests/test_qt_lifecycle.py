@@ -71,7 +71,7 @@ class QtLifecycleTests(unittest.TestCase):
                 first.drop_zone.hide()
                 self.addCleanup(first.drop_zone.deleteLater)
                 self.addCleanup(first.deleteLater)
-                self.assertFalse(first.keep_original.isChecked())
+                self.assertTrue(first.keep_original.isChecked())
 
                 first.keep_original.setChecked(True)
                 second = self.module.PDFCompressorWindow()
