@@ -102,7 +102,7 @@ class PDFCompressorWindow(QtWidgets.QMainWindow):
         self.keep_original = QtWidgets.QCheckBox("Keep original")
         self.keep_original.setToolTip("Saves “name compressed.pdf” without modifying the original PDF.")
         self.keep_original.setChecked(
-            self.settings.value("keepOriginal", False, type=bool)
+            self.settings.value("keepOriginal", True, type=bool)
         )
         self.keep_original.toggled.connect(self._save_keep_original)
         footer_layout.addWidget(self.keep_original)
